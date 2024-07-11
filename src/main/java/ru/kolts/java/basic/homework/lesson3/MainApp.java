@@ -65,10 +65,7 @@ public class MainApp {
     //    (1) Реализуйте метод greetings(), который при вызове должен
     //    отпечатать в столбец 4 слова: Hello, World, from, Java;
     public static void greetings() {
-        System.out.println("Hello");
-        System.out.println("World");
-        System.out.println("from");
-        System.out.println("Java");
+        System.out.println("Hello\nWorld\nfrom\nJava");
     }
 
     //    (2) Реализуйте метод checkSign(..), принимающий в качестве аргументов
@@ -115,9 +112,8 @@ public class MainApp {
     //    Если increment = true, то метод должен к initValue прибавить delta и отпечатать в
     //    консоль результат, в противном случае - вычесть;
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
-        System.out.println("initValue = " + initValue + " | delta = " + delta + " | increment = " + increment);
         if (increment)
-            System.out.println("Результат: " + (initValue + delta));
-        else System.out.println("Результат: " + (initValue - delta));
+            System.out.println("Результат: " + initValue + " + " + delta + " = " + (initValue + delta));
+        else System.out.println("Результат: " + initValue + " - " + delta + " = " + (initValue - delta));
     }
 }
