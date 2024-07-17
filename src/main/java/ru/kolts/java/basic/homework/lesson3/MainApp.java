@@ -9,13 +9,13 @@ public class MainApp {
     //    и после ввода выполнения метод, соответствующий указанному номеру со случайным
     //    значением аргументов;
     //    Домашнее задание сдается через Pull Request!
-    public static void main(String[] args) {
+    public static void lesson3() {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
         Random random = new Random();
 
         while (running) {
-            System.out.println("\nВведите номер задания от 1 до 5 включительно. Для выхода введите x");
+            System.out.println("\nВведите номер задания 1 - 5. Чтобы вернуться введите x");
             String task = scanner.nextLine();
             switch (task) {
                 case "1":
@@ -36,12 +36,24 @@ public class MainApp {
                     compareNumbers();
                     break;
                 case "5":
-                    // В аргументах рандомный диапазон чисел от 10 до -10
-                    addOrSubtractAndPrint(
-                            random.nextInt(10 + 10) - 10,
-                            random.nextInt(10 + 10) - 10,
-                            random.nextBoolean()
-                    );
+                    System.out.println("\nМетод 5:");
+                    System.out.println("Введите первое значение:");
+                    int initValue = scanner.nextInt();
+                    System.out.println("Введите второе значение:");
+                    int delta = scanner.nextInt();
+                    System.out.println("Выберите операцию - \"+\" или \"-\":");
+                    boolean increment;
+                    char operation = scanner.next().charAt(0);
+                    if (operation == '+') {
+                        increment = true;
+                    } else if (operation == '-') {
+                        increment = false;
+                    } else {
+                        System.out.println("Необходимо ввести + или -");
+                        break;
+                    }
+                    addOrSubtractAndPrint(initValue, delta, increment);
+                    scanner.nextLine();
                     break;
                 case "x":
                 case "х":
@@ -112,8 +124,6 @@ public class MainApp {
     //    Если increment = true, то метод должен к initValue прибавить delta и отпечатать в
     //    консоль результат, в противном случае - вычесть;
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
-        System.out.println("\nМетод 5:");
-
         if (increment)
             System.out.println("Результат: " + initValue + " + " + delta + " = " + (initValue + delta));
         else System.out.println("Результат: " + initValue + " - " + delta + " = " + (initValue - delta));
