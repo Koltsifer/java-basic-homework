@@ -3,7 +3,7 @@ package ru.kolts.java.basic.homework.lesson3;
 import java.util.Random;
 import java.util.Scanner;
 
-public class MainApp {
+public class HomeworkApp3 {
     //    Каждый метод последовательно вызовите из метода main();
     //    (*) При запуске приложения, запросите у пользователя число от 1 до 5,
     //    и после ввода выполнения метод, соответствующий указанному номеру со случайным
@@ -36,7 +36,7 @@ public class MainApp {
                     compareNumbers();
                     break;
                 case "5":
-                    System.out.println("\nМетод 5:");
+                    System.out.println("\nЗадание 5:");
                     System.out.println("Введите первое значение:");
                     int initValue = scanner.nextInt();
                     System.out.println("Введите второе значение:");
@@ -72,7 +72,7 @@ public class MainApp {
     //    (1) Реализуйте метод greetings(), который при вызове должен
     //    отпечатать в столбец 4 слова: Hello, World, from, Java;
     public static void greetings() {
-        System.out.println("\nМетод 1:");
+        System.out.println("\nЗадание 1:");
         System.out.println("Hello\nWorld\nfrom\nJava");
     }
 
@@ -81,7 +81,7 @@ public class MainApp {
     //    и если она больше или равна 0, то вывести в консоль сообщение “Сумма положительная”,
     //    в противном случае - “Сумма отрицательная”;
     public static void checkSign(int a, int b, int c) {
-        System.out.println("\nМетод 2:");
+        System.out.println("\nЗадание 2:");
         System.out.println("a = " + a + " | b = " + b + " | c = " + c);
 
         if (a + b + c >= 0)
@@ -94,7 +94,7 @@ public class MainApp {
     //    выведено сообщение “Красный”, если от 10 до 20 включительно, то “Желтый”,
     //    если больше 20 - “Зеленый”;
     public static void selectColor() {
-        System.out.println("\nМетод 3:");
+        System.out.println("\nЗадание 3:");
         Random random = new Random();
         int data = random.nextInt(30);
 
@@ -109,7 +109,7 @@ public class MainApp {
     //    a и b с любыми начальными значениями. Если a больше или равно b,
     //    то необходимо вывести в консоль сообщение “a >= b”, в противном случае “a < b”;
     public static void compareNumbers() {
-        System.out.println("\nМетод 4:");
+        System.out.println("\nЗадание 4:");
         Random random = new Random();
         int a = random.nextInt(100);
         int b = random.nextInt(100);
