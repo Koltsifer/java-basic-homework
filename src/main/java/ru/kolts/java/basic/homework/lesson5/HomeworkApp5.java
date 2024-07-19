@@ -71,7 +71,6 @@ public class HomeworkApp5 {
     public static void findMiddlePoint(int[] inputArr) {
         int maxSum = 0;
         int sum = 0;
-        boolean isPointThere = false;
 
         for (int i : inputArr) {
             maxSum += i;
@@ -80,12 +79,10 @@ public class HomeworkApp5 {
             sum += inputArr[i];
             if (sum == maxSum / 2) {
                 System.out.println("Точка находится между элементами: [" + i + "] и [" + (i + 1) + "]");
-                isPointThere = true;
+                return;
             }
         }
-        if (!isPointThere) {
-            System.out.println("Между элементами нет точки.");
-        }
+        System.out.println("Между элементами нет точки.");
     }
 
     //3. Реализуйте метод, проверяющий что все элементы массива идут в порядке убывания или
