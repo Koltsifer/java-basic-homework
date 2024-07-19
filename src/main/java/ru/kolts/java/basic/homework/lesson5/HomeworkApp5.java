@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class HomeworkApp5 {
-    public static void main(String[] args) {
+    public static void lesson5() {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
         int[] a = {1, 2, 3};
@@ -12,27 +12,27 @@ public class HomeworkApp5 {
         int[] c = {7, 7, 3, 1};
 
         while (running) {
-            System.out.println("\nВведите номер задания 1 - 4. Для выхода введите x");
+            System.out.println("\nВведите номер задания 1 - 4. Чтобы вернуться введите x");
             String input = scanner.nextLine();
             switch (input) {
                 case "1":
-                    System.out.println("Задание 1");
+                    System.out.println("Задание 1:");
                     arraysSum(a, b, c);
                     break;
                 case "2":
-                    System.out.println("Задание 2");
+                    System.out.println("Задание 2:");
                     findMiddlePoint(a);
                     findMiddlePoint(b);
                     findMiddlePoint(c);
                     break;
                 case "3":
-                    System.out.println("Задание 3");
+                    System.out.println("Задание 3:");
                     checkIfDescOrAsc(a);
                     checkIfDescOrAsc(b);
                     checkIfDescOrAsc(c);
                     break;
                 case "4":
-                    System.out.println("Задание 4");
+                    System.out.println("Задание 4:");
                     reverseArray(a);
                     reverseArray(b);
                     reverseArray(c);
