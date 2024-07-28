@@ -11,6 +11,7 @@ public class HomeWorkApp7 {
         int[][] smallArr1 = new int[1][1];
         int[][] smallArr2 = new int[2][1];
         int[][] smallArr3 = new int[1][2];
+        int[][] smallArr4 = {{1,2,3},{1}};
 
         while (running) {
             System.out.println("\nВведите номер задания 1 - 5. Чтобы вернуться введите x");
@@ -38,6 +39,7 @@ public class HomeWorkApp7 {
                     System.out.println(sumOfSecondLine(smallArr2));
                     System.out.println(sumOfSecondLine(smallArr3));
                     System.out.println(sumOfSecondLine(arr));
+                    System.out.println(sumOfSecondLine(smallArr4));
                     break;
                 case "x":
                 case "х":
@@ -139,12 +141,18 @@ public class HomeWorkApp7 {
     //5. Реализуйте метод, который считает сумму элементов второй строки или столбца двумерного массива (по
 //вашему выбору), если второй строки/столбца не существует, то в качестве результата необходимо вернуть -1
     public static int sumOfSecondLine(int[][] inputArr) {
-        int sum = 0;
-        if (inputArr.length < 2 || inputArr[0].length < 2) {
+        int min = inputArr.length;
+        for (int i = 0; i < inputArr.length; i++) {
+            if (inputArr[i].length < min){
+                min = inputArr[i].length;
+            }
+        }
+        if (min < 2) {
             return -1;
         }
 
         Scanner scanner = new Scanner(System.in);
+        int sum = 0;
         System.out.println("1. Сумма второй строки\n" +
                 "2. Сумма второго столбца");
         String input = scanner.nextLine();
