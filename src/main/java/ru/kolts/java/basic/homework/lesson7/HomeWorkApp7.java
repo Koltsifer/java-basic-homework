@@ -9,9 +9,7 @@ public class HomeWorkApp7 {
         int[][] arr = {{2, -2, 1, -2, 2}, {1, 1, 1, -2}};
         int[][] arrSquare = {{4, 1, 2, 4, 5}, {9, 3, 1, 4, 6}, {9, 3, 1, 3, 1}, {7, 5, 3, 7, 2}, {2, 7, 4, 2, 7}};
         int[][] smallArr1 = new int[1][1];
-        int[][] smallArr2 = new int[2][1];
-        int[][] smallArr3 = new int[1][2];
-        int[][] smallArr4 = {{1,2,3},{1}};
+        int[][] smallArr2 = {{1, 2, 3}, {1}};
 
         while (running) {
             System.out.println("\nВведите номер задания 1 - 5. Чтобы вернуться введите x");
@@ -35,11 +33,9 @@ public class HomeWorkApp7 {
                     break;
                 case "5":
                     System.out.println("Задание 5:");
-                    System.out.println(sumOfSecondLine(smallArr1));
-                    System.out.println(sumOfSecondLine(smallArr2));
-                    System.out.println(sumOfSecondLine(smallArr3));
-                    System.out.println(sumOfSecondLine(arr));
-                    System.out.println(sumOfSecondLine(smallArr4));
+                    System.out.println("Сумма второй строки/столбца = " + sumOfSecondLine(smallArr1));
+                    System.out.println("Сумма второй строки/столбца = " + sumOfSecondLine(arrSquare));
+                    System.out.println("Сумма второй строки/столбца = " + sumOfSecondLine(smallArr2));
                     break;
                 case "x":
                 case "х":
@@ -143,7 +139,7 @@ public class HomeWorkApp7 {
     public static int sumOfSecondLine(int[][] inputArr) {
         int min = inputArr.length;
         for (int i = 0; i < inputArr.length; i++) {
-            if (inputArr[i].length < min){
+            if (inputArr[i].length < min) {
                 min = inputArr[i].length;
             }
         }
