@@ -137,30 +137,35 @@ public class HomeWorkApp7 {
     //5. Реализуйте метод, который считает сумму элементов второй строки или столбца двумерного массива (по
 //вашему выбору), если второй строки/столбца не существует, то в качестве результата необходимо вернуть -1
     public static int sumOfSecondLine(int[][] inputArr) {
-        int min = inputArr.length;
-        for (int i = 0; i < inputArr.length; i++) {
-            if (inputArr[i].length < min) {
-                min = inputArr[i].length;
-            }
-        }
-        if (min < 2) {
-            return -1;
-        }
-
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
+
         System.out.println("1. Сумма второй строки\n" +
                 "2. Сумма второго столбца");
         String input = scanner.nextLine();
         switch (input) {
             case "1":
-                for (int i = 0; i < inputArr.length; i++) {
-                    sum += inputArr[1][i];
+                if (inputArr.length < 2) {
+                    return -1;
+                } else {
+                    for (int i = 0; i < inputArr[1].length; i++) {
+                        sum += inputArr[1][i];
+                    }
                 }
                 break;
             case "2":
+                int min = inputArr.length;
                 for (int i = 0; i < inputArr.length; i++) {
-                    sum += inputArr[i][1];
+                    if (inputArr[i].length < min) {
+                        min = inputArr[i].length;
+                    }
+                }
+                if (min < 2) {
+                    return -1;
+                } else {
+                    for (int i = 0; i < inputArr.length; i++) {
+                        sum += inputArr[i][1];
+                    }
                 }
                 break;
             default:
