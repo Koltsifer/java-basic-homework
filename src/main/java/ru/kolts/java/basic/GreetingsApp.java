@@ -1,4 +1,4 @@
-package ru.kolts.java.basic.homework;
+package ru.kolts.java.basic;
 
 import java.util.Scanner;
 
