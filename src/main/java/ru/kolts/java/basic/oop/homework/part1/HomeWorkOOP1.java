@@ -25,8 +25,10 @@ public class HomeWorkOOP1 {
         box.setColor("green");
         box.putItem("Нога");
         box.closed();
+        box.closed();
         box.pullItem();
         box.getInfo();
+        box.open();
         box.open();
         box.pullItem();
         box.getInfo();

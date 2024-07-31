@@ -9,7 +9,7 @@ public class User {
     private final int birthYear;
     private final String email;
 
-    public User(String lastName,String firstName,String middleName, int birthYear, String email){
+    public User(String lastName, String firstName, String middleName, int birthYear, String email) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -17,12 +17,12 @@ public class User {
         this.email = email;
     }
 
-    public int getAge(){
+    public int getAge() {
         int currentYear = Year.now().getValue();
         return currentYear - birthYear;
     }
 
-    public void getInfo(){
+    public void getInfo() {
         System.out.println("\nФИО: " + lastName + " " + firstName + " " + middleName);
         System.out.println("Год рождения: " + birthYear);
         System.out.println("e-mail: " + email);

@@ -50,13 +50,20 @@ public class Box {
     }
 
     public void open() {
-        isOpen = true;
-        System.out.println("\nКоробка была открыта.");
+        if (!isOpen) {
+            isOpen = true;
+            System.out.println("\nКоробка была открыта.");
+        } else {
+            System.out.println("\nКоробка уже была открыта.");
+        }
     }
 
     public void closed() {
-        isOpen = false;
-        System.out.println("\nКоробка была закрыта.");
+        if (isOpen) {
+            isOpen = false;
+            System.out.println("\nКоробка была закрыта.");
+        } else {
+            System.out.println("\nКоробка уже была закрыта.");
+        }
     }
-
 }
