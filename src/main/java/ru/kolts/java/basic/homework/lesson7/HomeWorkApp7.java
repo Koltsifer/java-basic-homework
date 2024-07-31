@@ -3,11 +3,11 @@ package ru.kolts.java.basic.homework.lesson7;
 import java.util.Scanner;
 
 public class HomeWorkApp7 {
-    public static void main(String[] args) {
+    public static void lesson7() {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
         int[][] arr = {{2, -2, 1, -2, 2}, {1, 1, 1, -2}};
-        int[][] arrSquare = {{4, 1, 2, 4, 5}, {9, 3, 1, 4, 6}, {9, 3, 1, 3, 1}, {7, 5, 3, 7, 2}, {2, 7, 4, 2, 7}};
+        int[][] arrSquare = {{1, 1, 2, 1, 1}, {1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}};
         int[][] smallArr1 = new int[1][1];
         int[][] smallArr2 = {{1, 2, 3}, {1}};
 
