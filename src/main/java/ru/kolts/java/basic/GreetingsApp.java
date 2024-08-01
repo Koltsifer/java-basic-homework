@@ -2,9 +2,10 @@ package ru.kolts.java.basic;
 
 import java.util.Scanner;
 
-import static ru.kolts.java.basic.homework.lesson3.HomeworkApp3.lesson3;
-import static ru.kolts.java.basic.homework.lesson5.HomeworkApp5.lesson5;
-import static ru.kolts.java.basic.homework.lesson7.HomeWorkApp7.lesson7;
+import static ru.kolts.java.basic.homework1.lesson3.HomeworkApp3.lesson3;
+import static ru.kolts.java.basic.homework1.lesson5.HomeworkApp5.lesson5;
+import static ru.kolts.java.basic.homework1.lesson7.HomeWorkApp7.lesson7;
+import static ru.kolts.java.basic.oop.homework2.part1.HomeWorkOOP1.oopPart1;
 
 public class GreetingsApp {
     public static void main(String[] args) {
@@ -12,17 +13,20 @@ public class GreetingsApp {
         boolean running = true;
 
         while (running) {
-            System.out.println("\nВведите номер занятия (3, 5, 7). Для выхода введите x");
+            System.out.println("\nВведите номер занятия (1-4). Для выхода введите x");
             String lesson = scanner.nextLine();
             switch (lesson) {
-                case "3":
+                case "1":
                     lesson3();
                     break;
-                case "5":
+                case "2":
                     lesson5();
                     break;
-                case "7":
+                case "3":
                     lesson7();
+                break;
+                case "4":
+                    oopPart1();
                 break;
                 case "x":
                 case "х":

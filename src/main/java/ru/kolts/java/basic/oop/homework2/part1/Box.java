@@ -1,4 +1,4 @@
-package ru.kolts.java.basic.oop.homework.part1;
+package ru.kolts.java.basic.oop.homework2.part1;
 
 public class Box {
     private final int size;

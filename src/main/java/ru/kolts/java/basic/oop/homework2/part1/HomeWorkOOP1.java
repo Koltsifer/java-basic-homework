@@ -1,7 +1,7 @@
-package ru.kolts.java.basic.oop.homework.part1;
+package ru.kolts.java.basic.oop.homework2.part1;
 
 public class HomeWorkOOP1 {
-    public static void main(String[] args) {
+    public static void oopPart1() {
         User[] users = {
                 new User("Xavier", "Robert", "Kelly", 1920, "unknown"),
                 new User("Jesus", "Isaac", "Wilson", 1983, "unknown"),
