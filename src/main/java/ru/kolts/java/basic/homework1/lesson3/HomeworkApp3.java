@@ -1,4 +1,4 @@
-package ru.kolts.java.basic.homework.lesson3;
+package ru.kolts.java.basic.homework1.lesson3;
 
 import java.util.Random;
 import java.util.Scanner;
