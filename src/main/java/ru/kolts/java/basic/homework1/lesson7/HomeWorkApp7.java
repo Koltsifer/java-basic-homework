@@ -54,10 +54,10 @@ public class HomeWorkApp7 {
 //массив, метод должен посчитать и вернуть сумму всех элементов массива, которые больше 0;
     public static int sumOfPositiveElements(int[][] inputArr) {
         int sum = 0;
-        for (int i = 0; i < inputArr.length; i++) {
-            for (int j = 0; j < inputArr[i].length; j++) {
-                if (inputArr[i][j] > 0) {
-                    sum += inputArr[i][j];
+        for (int[] ints : inputArr) {
+            for (int anInt : ints) {
+                if (anInt > 0) {
+                    sum += anInt;
                 }
             }
         }
@@ -113,9 +113,9 @@ public class HomeWorkApp7 {
                 break;
         }
 
-        for (int i = 0; i < inputArr.length; i++) {
-            for (int j = 0; j < inputArr[i].length; j++) {
-                System.out.print(inputArr[i][j] + "  ");
+        for (int[] ints : inputArr) {
+            for (int anInt : ints) {
+                System.out.print(anInt + "  ");
             }
             System.out.println();
         }
@@ -124,10 +124,10 @@ public class HomeWorkApp7 {
     //4. Реализовать метод findMax(int[][] array) который должен найти и вернуть максимальный элемент массива;
     public static int findMax(int[][] array) {
         int max = array[0][0];
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (max < array[i][j]) {
-                    max = array[i][j];
+        for (int[] ints : array) {
+            for (int anInt : ints) {
+                if (max < anInt) {
+                    max = anInt;
                 }
             }
         }
@@ -155,16 +155,16 @@ public class HomeWorkApp7 {
                 break;
             case "2":
                 int min = inputArr.length;
-                for (int i = 0; i < inputArr.length; i++) {
-                    if (inputArr[i].length < min) {
-                        min = inputArr[i].length;
+                for (int[] ints : inputArr) {
+                    if (ints.length < min) {
+                        min = ints.length;
                     }
                 }
                 if (min < 2) {
                     return -1;
                 } else {
-                    for (int i = 0; i < inputArr.length; i++) {
-                        sum += inputArr[i][1];
+                    for (int[] ints : inputArr) {
+                        sum += ints[1];
                     }
                 }
                 break;

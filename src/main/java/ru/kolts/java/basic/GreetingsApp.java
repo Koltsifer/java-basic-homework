@@ -24,10 +24,10 @@ public class GreetingsApp {
                     break;
                 case "3":
                     lesson7();
-                break;
+                    break;
                 case "4":
                     oopPart1();
-                break;
+                    break;
                 case "x":
                 case "х":
                 case "X":
