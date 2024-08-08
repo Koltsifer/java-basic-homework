@@ -7,16 +7,4 @@ public class Dog extends Animal {
         this.runSpeed = runSpeed;
         this.endurance = endurance;
     }
-
-    @Override
-    float swim(int distance) {
-        if ((endurance - (distance * 2)) >= 0) {
-            endurance -= (distance * 2);
-            System.out.println("Животное поплыло");
-            return (float) distance / swimSpeed;
-        } else {
-            System.out.println("Животное устало");
-            return -1;
-        }
-    }
 }

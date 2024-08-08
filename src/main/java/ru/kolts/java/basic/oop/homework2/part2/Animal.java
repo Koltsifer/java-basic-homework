@@ -24,5 +24,24 @@ abstract class Animal {
         }
     }
 
-    abstract float swim(int distance);
+    public float swim(int distance) {
+        if (this instanceof Cat) {
+            System.out.println("Кот не умеет плавать!");
+            return -1;
+        } else if (this instanceof Horse) {
+            if ((endurance - (distance * 4)) >= 0) {
+                endurance -= (distance * 4);
+                System.out.println("Животное поплыло");
+                return (float) distance / swimSpeed;
+            }
+        } else if (this instanceof Dog) {
+            if ((endurance - (distance * 2)) >= 0) {
+                endurance -= (distance * 2);
+                System.out.println("Животное поплыло");
+                return (float) distance / swimSpeed;
+            }
+        }
+        System.out.println("Животное устало");
+        return -1;
+    }
 }
