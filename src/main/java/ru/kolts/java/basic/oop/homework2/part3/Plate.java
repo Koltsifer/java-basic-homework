@@ -12,11 +12,9 @@ public class Plate {
     public void addFood(int amount) {
         if ((currentFood + amount) <= maxFood && amount > 0) {
             currentFood += amount;
-            System.out.println("В тарелке лежит: " + currentFood + "/" + maxFood);
+            System.out.println("Вы положили в тарелку: " + amount + " | " + currentFood + "/" + maxFood);
         } else {
-            System.out.println("Столько нельзя положить в тарелку!");
-            System.out.println("В тарелке лежит: " + currentFood + "/" + maxFood);
-            System.out.println("Вы пытаетесь положить: " + amount);
+            System.out.println("Столько нельзя положить в тарелку! (" + amount + ") | " + currentFood + "/" + maxFood);
         }
     }
 
