@@ -1,4 +1,4 @@
-package ru.kolts.java.basic.oop.homework2.part3;
+package ru.kolts.java.basic.oop.homework2.part2.practice;
 
 public class HomeWorkOOP3 {
     public static void main(String[] args) {
