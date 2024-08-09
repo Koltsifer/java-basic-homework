@@ -14,13 +14,13 @@ public class HomeWorkOOP3 {
         Plate plate = new Plate(15);
 
         for (Cat cat : cats) {
-            cat.info();
+            System.out.println(cat);
         }
         for (Cat cat : cats) {
             cat.fed = plate.feed(cat.appetite, cat.fed);
         }
         for (Cat cat : cats) {
-            cat.info();
+            System.out.println(cat);
         }
         plate.addFood(10);
         plate.addFood(50);
@@ -29,7 +29,7 @@ public class HomeWorkOOP3 {
             cat.fed = plate.feed(cat.appetite, cat.fed);
         }
         for (Cat cat : cats) {
-            cat.info();
+            System.out.println(cat);
         }
     }
 }

@@ -11,7 +11,8 @@ public class Cat {
         this.fed = false;
     }
 
-    public void info(){
-        System.out.println(name + " - " + (fed ? "Сытый" : "Голодный"));
+    @Override
+    public String toString() {
+        return name + " - " + (fed ? "Сытый" : "Голодный");
     }
 }
