@@ -1,12 +1,20 @@
 package ru.kolts.java.basic.oop.homework2.part2.practice;
 
 public class Plate {
-    public int currentFood;
-    public int maxFood;
+    private int currentFood;
+    private final int maxFood;
 
     public Plate(int maxFood) {
         this.maxFood = maxFood;
         this.currentFood = maxFood;
+    }
+
+    public void setCurrentFood(int currentFood) {
+        this.currentFood = currentFood;
+    }
+
+    public int getCurrentFood() {
+        return currentFood;
     }
 
     public void addFood(int amount) {
@@ -18,11 +26,7 @@ public class Plate {
         }
     }
 
-    public boolean feed(int appetite, boolean fed) {
-        if ((currentFood - appetite) >= 0 && !fed) {
-            currentFood -= appetite;
-            return currentFood >= 0;
-        }
-        return fed;
+    public boolean decrease(int appetite) {
+        return currentFood - appetite >= 0;
     }
 }

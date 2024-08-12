@@ -17,7 +17,7 @@ public class HomeWorkOOP3 {
             System.out.println(cat);
         }
         for (Cat cat : cats) {
-            cat.fed = plate.feed(cat.appetite, cat.fed);
+            cat.eat(plate);
         }
         for (Cat cat : cats) {
             System.out.println(cat);
@@ -26,7 +26,7 @@ public class HomeWorkOOP3 {
         plate.addFood(50);
         plate.addFood(-10);
         for (Cat cat : cats) {
-            cat.fed = plate.feed(cat.appetite, cat.fed);
+            cat.eat(plate);
         }
         for (Cat cat : cats) {
             System.out.println(cat);
