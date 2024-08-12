@@ -22,9 +22,11 @@ public class HomeWorkOOP3 {
         for (Cat cat : cats) {
             System.out.println(cat);
         }
+        System.out.println(plate);
         plate.addFood(10);
         plate.addFood(50);
         plate.addFood(-10);
+        System.out.println(plate);
         for (Cat cat : cats) {
             cat.eat(plate);
         }

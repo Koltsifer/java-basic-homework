@@ -33,4 +33,9 @@ public class Plate {
     public boolean decrease(int appetite) {
         return currentFood - appetite >= 0;
     }
+
+    @Override
+    public String toString() {
+        return "Тарелка: " + currentFood + "/" + maxFood;
+    }
 }
