@@ -10,7 +10,7 @@ public class Plate {
     }
 
     public void setCurrentFood(int currentFood) {
-        if (currentFood >= 0 || currentFood <= maxFood) {
+        if (currentFood >= 0 && currentFood <= maxFood) {
             this.currentFood = currentFood;
         } else {
             System.out.println("В тарелке не может быть столько: " + currentFood);
