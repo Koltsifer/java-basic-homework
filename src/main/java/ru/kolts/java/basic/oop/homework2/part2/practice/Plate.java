@@ -31,7 +31,11 @@ public class Plate {
     }
 
     public boolean decrease(int appetite) {
-        return currentFood - appetite >= 0;
+        if(currentFood - appetite >= 0){
+            currentFood -= appetite;
+            return  true;
+        }
+        return false;
     }
 
     @Override

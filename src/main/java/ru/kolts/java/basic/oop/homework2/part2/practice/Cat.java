@@ -11,9 +11,8 @@ public class Cat {
         this.fed = false;
     }
 
-    public void eat(Plate foodSource) {
-        if (foodSource.decrease(appetite) && !fed) {
-            foodSource.setCurrentFood(foodSource.getCurrentFood() - appetite);
+    public void eatFromPlate(Plate plate) {
+        if (!fed && plate.decrease(appetite)) {
             fed = true;
         }
     }
