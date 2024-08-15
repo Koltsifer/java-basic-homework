@@ -6,6 +6,7 @@ public class MainApp {
                 {"10", "2", "3", "5"},
                 {"3", "4", "5", "5"},
                 {"3", "2", "5", "5"},
+                {"10", "2", "3", "6"},
                 {"10", "2", "3", "6"}
         };
         String[][] arr2 = {
@@ -47,13 +48,10 @@ public class MainApp {
     }
 
     public static void checkIs4by4(String[][] arr) {
-        if (arr.length != 4) {
-            throw new AppArraySizeException("Размер массива может быть только 4 на 4");
-        } else {
-            for (String[] strings : arr) {
-                if (strings.length != 4) {
-                    throw new AppArraySizeException("Размер массива может быть только 4 на 4");
-                }
+        if (arr.length != 4) throw new AppArraySizeException("Размер массива может быть только 4 на 4");
+        for (String[] strings : arr) {
+            if (strings.length != 4) {
+                throw new AppArraySizeException("Размер массива может быть только 4 на 4");
             }
         }
     }
