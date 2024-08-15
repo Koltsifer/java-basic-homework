@@ -18,23 +18,23 @@ public class MainApp {
 
         try {
             System.out.println(sumArray4x4(arr1));
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             System.out.println(e);
         }
         try {
             System.out.println(sumArray4x4(arr2));
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             System.out.println(e);
         }
         try {
             System.out.println(sumArray4x4(arr3));
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             System.out.println(e);
         }
     }
 
     public static int sumArray4x4(String[][] input) {
-        if (!is4by4(input)) throw new AppArraySizeException("Размер массива может быть только 4 на 4");
+        checkIs4by4(input);
         int sum = 0;
         for (int i = 0; i < input.length; i++) {
             for (int j = 0; j < input[i].length; j++) {
@@ -46,18 +46,16 @@ public class MainApp {
         return sum;
     }
 
-    public static boolean is4by4(String[][] arr) {
-        int max = 0;
-        int min = arr[0].length;
-        for (String[] strings : arr) {
-            if (strings.length > max) {
-                max = strings.length;
-            }
-            if (strings.length < min) {
-                min = strings.length;
+    public static void checkIs4by4(String[][] arr) {
+        if (arr.length != 4) {
+            throw new AppArraySizeException("Размер массива может быть только 4 на 4");
+        } else {
+            for (String[] strings : arr) {
+                if (strings.length != 4) {
+                    throw new AppArraySizeException("Размер массива может быть только 4 на 4");
+                }
             }
         }
-        return max == 4 && min == 4 & arr.length == 4;
     }
 
     public static boolean isNumber(String strNum) {
