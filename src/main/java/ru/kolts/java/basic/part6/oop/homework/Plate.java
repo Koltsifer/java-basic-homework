@@ -18,7 +18,7 @@ public class Plate {
         }
     }
 
-    public boolean canDecrease(int appetite) {
+    public boolean decrease(int appetite) {
         if (currentFood - appetite >= 0) {
             currentFood -= appetite;
             return true;

@@ -12,7 +12,7 @@ public class Cat {
     }
 
     public void eatFromPlate(Plate plate) {
-        if (!fed && plate.canDecrease(appetite)) {
+        if (!fed && plate.decrease(appetite)) {
             fed = true;
         }
     }
