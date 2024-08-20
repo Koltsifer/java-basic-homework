@@ -2,8 +2,8 @@ package ru.kolts.java.basic;
 
 import java.util.Scanner;
 
-import static ru.kolts.java.basic.part1.homework.MainApp.lesson3;
-import static ru.kolts.java.basic.part2.homework.MainApp.lesson5;
+import static ru.kolts.java.basic.part1.homework.MainApp.part1;
+import static ru.kolts.java.basic.part2.homework.MainApp.part2;
 import static ru.kolts.java.basic.part3.homework.MainApp.lesson7;
 import static ru.kolts.java.basic.part4.oop.homework.MainApp.oopPart1;
 
@@ -17,10 +17,10 @@ public class GreetingsApp {
             String lesson = scanner.nextLine();
             switch (lesson) {
                 case "1":
-                    lesson3();
+                    part1();
                     break;
                 case "2":
-                    lesson5();
+                    part2();
                     break;
                 case "3":
                     lesson7();
