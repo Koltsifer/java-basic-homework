@@ -2,10 +2,10 @@ package ru.kolts.java.basic;
 
 import java.util.Scanner;
 
-import static ru.kolts.java.basic.homework1.lesson3.HomeworkApp3.lesson3;
-import static ru.kolts.java.basic.homework1.lesson5.HomeworkApp5.lesson5;
-import static ru.kolts.java.basic.homework1.lesson7.HomeWorkApp7.lesson7;
-import static ru.kolts.java.basic.oop.homework2.part1.HomeWorkOOP1.oopPart1;
+import static ru.kolts.java.basic.part1.homework.MainApp.lesson3;
+import static ru.kolts.java.basic.part2.homework.MainApp.lesson5;
+import static ru.kolts.java.basic.part3.homework.MainApp.lesson7;
+import static ru.kolts.java.basic.part4.oop.homework.MainApp.oopPart1;
 
 public class GreetingsApp {
     public static void main(String[] args) {
