@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 import static ru.kolts.java.basic.part1.homework.MainApp.part1;
 import static ru.kolts.java.basic.part2.homework.MainApp.part2;
-import static ru.kolts.java.basic.part3.homework.MainApp.lesson7;
-import static ru.kolts.java.basic.part4.oop.homework.MainApp.oopPart1;
+import static ru.kolts.java.basic.part3.homework.MainApp.part3;
+import static ru.kolts.java.basic.part4.oop.homework.MainApp.part4;
 
 public class GreetingsApp {
     public static void main(String[] args) {
@@ -23,10 +23,10 @@ public class GreetingsApp {
                     part2();
                     break;
                 case "3":
-                    lesson7();
+                    part3();
                     break;
                 case "4":
-                    oopPart1();
+                    part4();
                     break;
                 case "x":
                 case "х":
