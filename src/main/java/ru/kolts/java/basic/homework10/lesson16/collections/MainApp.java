@@ -9,6 +9,10 @@ package ru.kolts.java.basic.homework10.lesson16.collections;
  */
 public class MainApp {
     public static void main(String[] args) {
+        PhoneBook list = new PhoneBook();
+        list.add("Павличенко Дмитрий Андреевич", "88005553535");
+        list.add("Иванов Иван Иванович", "12412412");
 
+        System.out.println(list.findPhoneByName("Дмитрий"));
     }
 }
