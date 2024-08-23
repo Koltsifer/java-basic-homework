@@ -1,4 +1,5 @@
 package ru.kolts.java.basic.homework10.lesson16.collections;
+
 /**
  * Реализуйте класс PhoneBook, который хранит в себе список имен (фио) и телефонных номеров;<p>
  * Метод add() должен позволять добавлять запись имя-телефон;<p>
@@ -10,9 +11,23 @@ package ru.kolts.java.basic.homework10.lesson16.collections;
 public class MainApp {
     public static void main(String[] args) {
         PhoneBook list = new PhoneBook();
-        list.add("Павличенко Дмитрий Андреевич", "88005553535");
-        list.add("Иванов Иван Иванович", "12412412");
+        list.add("Иванов Егор Георгиевич", "80001110011");
+        list.add("Иванов Егор Георгиевич", "80002220022");
+        list.add("Иванов Дамир Макарович", "80002220022");
+        list.add("Сидорова Есения Мироновна", "80196660986");
+        list.add("Егорова Айлин Ильинична", "81447119287");
+        list.add("Соловьева Маргарита Михайловна", "84872939006");
+        list.add("Соловьева Екатерина Никитична", "85276340071");
+        list.add("Грачева Мария Всеволодовна", "89378106040");
+        list.add("Соловьева Ксения Степановна", "85756888699");
+        list.add("Лукьянова Алиса Михайловна", "87261513750");
+        list.add("Белова Ева Артёмовна", "86534226480");
+        list.find("Иванов Егор Георгиевич");
+        list.find("Иванов");
+        list.printList();
 
-        System.out.println(list.findPhoneByName("Дмитрий"));
+        System.out.println(list.containsPhoneNumber("12354"));
+        System.out.println(list.containsPhoneNumber("86534226480"));
+
     }
 }

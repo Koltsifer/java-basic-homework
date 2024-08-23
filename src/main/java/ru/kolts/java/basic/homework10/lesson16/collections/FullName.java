@@ -13,23 +13,8 @@ public class FullName {
         this.otchestvo = otchestvo;
     }
 
-    public FullName getFIOByName(String firstName){
-        if (Objects.equals(this.firstName, firstName)){
-            return this;
-        }
-        return null;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getOtchestvo() {
-        return otchestvo;
     }
 
     @Override
