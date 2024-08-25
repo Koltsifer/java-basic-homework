@@ -3,6 +3,7 @@ package ru.kolts.java.basic.homewrok9.lesson15.collections;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 /**
  * Реализуйте метод, принимающий в качестве аргументов числа min и max, и возвращающий ArrayList с набором
  * последовательных значений в указанном диапазоне (min и max включительно, шаг - 1);<p>
@@ -24,12 +25,14 @@ import java.util.List;
 public class MainApp {
     public static void main(String[] args) {
         List<Integer> list = createInRangeArray(2, 10);
-        printList(list);
+        System.out.println(list);
+
         System.out.println(sumList(list));
         fillList(5, list);
-        printList(list);
+        System.out.println(list);
+
         increaseList(5, list);
-        printList(list);
+        System.out.println(list);
 
         List<Employee> employeeList = new ArrayList<>();
         Collections.addAll(employeeList,
@@ -39,27 +42,19 @@ public class MainApp {
                 new Employee("Рик", 29),
                 new Employee("Джо", 35)
         );
-        printList(employeeList);
+        System.out.println(employeeList);
 
         List<Employee> trimedEmployeeList = Employee.trimEmployeeListByAge(employeeList, 25);
-        printList(trimedEmployeeList);
+        System.out.println(trimedEmployeeList);
 
         List<String> onlyNamesEmployeeList = Employee.returnOnlyNamesList(employeeList);
-        printList(onlyNamesEmployeeList);
+        System.out.println(onlyNamesEmployeeList);
 
         System.out.println(Employee.isAgeAverageInList(employeeList, 30));
         System.out.println(Employee.isAgeAverageInList(employeeList, 20));
 
         Employee youngest = Employee.returnYoungest(employeeList);
         System.out.println(youngest);
-    }
-
-    public static <T> void printList(List<T> list) {
-        System.out.println("=====");
-        for (T t : list) {
-            System.out.println(t);
-        }
-        System.out.println("=====");
     }
 
     public static ArrayList<Integer> createInRangeArray(int min, int max) {

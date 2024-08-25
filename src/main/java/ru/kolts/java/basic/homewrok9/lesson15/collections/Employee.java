@@ -39,11 +39,9 @@ public class Employee {
     }
 
     public static Employee returnYoungest(List<Employee> list) {
-        int smallestAge = Integer.MAX_VALUE;
-        Employee youngest = null;
+        Employee youngest = list.get(0);
         for (Employee employee : list) {
-            if (employee.age < smallestAge) {
-                smallestAge = employee.age;
+            if (employee.age < youngest.age) {
                 youngest = employee;
             }
         }
@@ -52,6 +50,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Сотрудник: Имя - \"" + name + "\" | Возраст - " + age;
+        return name + " " + age;
     }
 }
