@@ -17,49 +17,7 @@ public class PhoneBook {
         this.list = new HashMap<>();
     }
 
-    public void add(String fio, String phone) {
-        String[] arrayFIO = fio.split(" ");
-        if (arrayFIO.length != 3) {
-            System.out.println("Необходимо указать ФИО формата: \"Фамилия Имя Отчество\"");
-            return;
-        }
-        FullName newFio = new FullName(arrayFIO[0], arrayFIO[1], arrayFIO[2]);
-        Set<String> newPhone = new HashSet<>();
-        newPhone.add(phone);
-        if (list.containsKey(newFio)) {
-            list.get(newFio).add(phone);
-        } else {
-            list.put(newFio, newPhone);
-        }
-    }
-
-    public void find(String name) {
-        System.out.println("По значению \"" + name + "\" найден(-ы) номер(-а):");
-        boolean isThereAnyNumbers = false;
-        for (Map.Entry<FullName, Set<String>> element : list.entrySet()) {
-            if (Objects.equals(element.getKey().getLastName(), name) ||
-                    Objects.equals(element.getKey().toString(), name)) {
-                System.out.println(element.getValue());
-                isThereAnyNumbers = true;
-            }
-        }
-        if (!isThereAnyNumbers) {
-            System.out.println("Номера не найдены.");
-        }
-    }
-
-    public boolean containsPhoneNumber(String phone) {
-        for (Map.Entry<FullName, Set<String>> element : list.entrySet()) {
-            if (element.getValue().contains(phone)) {
-                return element.getValue().contains(phone);
-            }
-        }
-        return false;
-    }
-
-    public void printList() {
-        for (Map.Entry<FullName, Set<String>> element : list.entrySet()) {
-            System.out.println("ФИО: \"" + element.getKey() + "\" Телефон: " + element.getValue());
-        }
+    public Map<FullName, Set<String>> getList() {
+        return list;
     }
 }
