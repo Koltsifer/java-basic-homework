@@ -1,4 +1,4 @@
-package ru.kolts.java.basic.homewrok9.lesson15.collections;
+package ru.kolts.java.basic.homework09.lesson15.collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
