@@ -17,8 +17,8 @@ public class PhoneBook {
         this.list = new HashMap<>();
     }
 
-    public void add(String FIO, String phone) {
-        String[] arrayFIO = FIO.split(" ");
+    public void add(String fio, String phone) {
+        String[] arrayFIO = fio.split(" ");
         if (arrayFIO.length != 3) {
             System.out.println("Необходимо указать ФИО формата: \"Фамилия Имя Отчество\"");
             return;
