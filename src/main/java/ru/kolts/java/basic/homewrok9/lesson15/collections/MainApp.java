@@ -44,16 +44,16 @@ public class MainApp {
         );
         System.out.println(employeeList);
 
-        List<Employee> trimedEmployeeList = Employee.trimEmployeeListByAge(employeeList, 25);
+        List<Employee> trimedEmployeeList = listByAge(employeeList, 25);
         System.out.println(trimedEmployeeList);
 
-        List<String> onlyNamesEmployeeList = Employee.returnOnlyNamesList(employeeList);
+        List<String> onlyNamesEmployeeList = listOfNames(employeeList);
         System.out.println(onlyNamesEmployeeList);
 
-        System.out.println(Employee.isAgeAverageInList(employeeList, 30));
-        System.out.println(Employee.isAgeAverageInList(employeeList, 20));
+        System.out.println(isAgeAverage(employeeList, 30));
+        System.out.println(isAgeAverage(employeeList, 20));
 
-        Employee youngest = Employee.returnYoungest(employeeList);
+        Employee youngest = getYoungest(employeeList);
         System.out.println(youngest);
     }
 
@@ -91,5 +91,42 @@ public class MainApp {
         for (Integer integer : list) {
             list.set(list.indexOf(integer), in + integer);
         }
+    }
+
+    //Employee methods
+    public static List<String> listOfNames(List<Employee> list) {
+        List<String> newList = new ArrayList<>();
+        for (Employee employee : list) {
+            newList.add(employee.getName());
+        }
+        return newList;
+    }
+
+    public static List<Employee> listByAge(List<Employee> list, int minAge) {
+        List<Employee> newList = new ArrayList<>();
+        for (Employee employee : list) {
+            if (employee.getAge() >= minAge) {
+                newList.add(employee);
+            }
+        }
+        return newList;
+    }
+
+    public static boolean isAgeAverage(List<Employee> list, int averageAge) {
+        int average = 0;
+        for (Employee employee : list) {
+            average += employee.getAge();
+        }
+        return average / list.size() > averageAge;
+    }
+
+    public static Employee getYoungest(List<Employee> list) {
+        Employee youngest = list.get(0);
+        for (Employee employee : list) {
+            if (employee.getAge() < youngest.getAge()) {
+                youngest = employee;
+            }
+        }
+        return youngest;
     }
 }
