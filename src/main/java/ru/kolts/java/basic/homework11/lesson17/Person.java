@@ -11,7 +11,7 @@ public class Person {
     public Person(String name, Position position) {
         this.name = name;
         this.position = position;
-        this.id = counter;
+        id = counter;
         counter++;
     }
 
