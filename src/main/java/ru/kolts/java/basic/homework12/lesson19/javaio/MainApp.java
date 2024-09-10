@@ -1,10 +1,8 @@
 package ru.kolts.java.basic.homework12.lesson19.javaio;
 
-import java.io.File;
 import java.io.*;
+import java.util.*;
 import java.nio.charset.StandardCharsets;
-import java.util.Objects;
-import java.util.Scanner;
 
 /**
  * Реализуйте приложение, позволяющее работать с текстовыми файлами
