@@ -58,10 +58,9 @@ public class MainApp {
             return;
         }
         try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(file))) {
-            int n = in.read();
-            while (n != -1) {
+            int n;
+            while ((n = in.read()) != -1) {
                 System.out.print((char) n);
-                n = in.read();
             }
             System.out.println();
         } catch (IOException e) {
