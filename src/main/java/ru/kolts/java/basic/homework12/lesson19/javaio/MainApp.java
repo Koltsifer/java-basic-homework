@@ -20,7 +20,7 @@ import java.util.Scanner;
 
 public class MainApp {
     public static void main(String[] args) {
-        String path = "./";
+        String path = ".";
         printDir(path);
         File file = findFile(path);
         readFile(file);
