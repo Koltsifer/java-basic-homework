@@ -19,8 +19,9 @@ import java.nio.charset.StandardCharsets;
 public class MainApp {
     public static void main(String[] args) {
         String path = ".";
+        String fileName = "a.txt";
         printDir(path);
-        File file = findFile(path);
+        File file = getFile(path, fileName);
         readFile(file);
         writeFile(file);
         readFile(file);
@@ -39,14 +40,12 @@ public class MainApp {
         }
     }
 
-    public static File findFile(String path){
+    public static File getFile(String path, String fileName){
         if (path == null){
             return null;
         }
         File file = null;
-        Scanner scanner = new Scanner(System.in);
             System.out.println("Укажите имя файла:");
-            String fileName = scanner.nextLine();
             for (File f : Objects.requireNonNull(new File(path).listFiles())) {
                 if (f.getName().equals(fileName)) {
                     file = f;
