@@ -19,20 +19,19 @@ import java.nio.charset.StandardCharsets;
 public class MainApp {
     public static void main(String[] args) {
         String path = ".";
-        String fileName = "a.txt";
         printDir(path);
-        File file = getFile(path, fileName);
+        File file = findFile(path);
         readFile(file);
         writeFile(file);
         readFile(file);
     }
 
-    public static void printDir(String path){
-        if (path == null){
+    public static void printDir(String path) {
+        if (path == null) {
             return;
         }
         File dir = new File(path);
-        if (dir.isDirectory()){
+        if (dir.isDirectory()) {
             for (File f : Objects.requireNonNull(dir.listFiles())) {
                 System.out.println(f.getName());
             }
@@ -40,22 +39,22 @@ public class MainApp {
         }
     }
 
-    public static File getFile(String path, String fileName){
-        if (path == null){
+    public static File findFile(String path) {
+        if (path == null) {
             return null;
         }
-        File file = null;
-            System.out.println("Укажите имя файла:");
-            for (File f : Objects.requireNonNull(new File(path).listFiles())) {
-                if (f.getName().equals(fileName)) {
-                    file = f;
-                }
+        System.out.println("Укажите имя файла:");
+        String fileName = new Scanner(System.in).nextLine();
+        for (File f : Objects.requireNonNull(new File(path).listFiles())) {
+            if (f.getName().equals(fileName)) {
+                return f;
             }
-        return file;
+        }
+        return null;
     }
 
-    public static void readFile(File file){
-        if (file == null){
+    public static void readFile(File file) {
+        if (file == null) {
             return;
         }
         try (BufferedInputStream in = new BufferedInputStream(new FileInputStream(file))) {
@@ -70,8 +69,8 @@ public class MainApp {
         }
     }
 
-    public static void writeFile(File file){
-        if (file == null){
+    public static void writeFile(File file) {
+        if (file == null) {
             return;
         }
         try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(file, true))) {
