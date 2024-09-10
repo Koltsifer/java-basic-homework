@@ -75,8 +75,7 @@ public class MainApp {
         }
         try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(file, true))) {
             System.out.println("Укажите данные для записи:");
-            byte[] buffer = new Scanner(System.in).nextLine().getBytes(StandardCharsets.UTF_8);
-            out.write(buffer);
+            out.write(new Scanner(System.in).nextLine().getBytes(StandardCharsets.UTF_8));
         } catch (IOException e) {
             e.printStackTrace();
         }
