@@ -12,8 +12,8 @@ public class PingClient implements AutoCloseable {
         inputStream = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
     }
 
-    public void send(byte[] bytes) throws IOException {
-        outputStream.write(bytes);
+    public void send(String message) throws IOException {
+        outputStream.writeUTF(message);
         outputStream.flush();
     }
 
