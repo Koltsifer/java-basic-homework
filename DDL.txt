@@ -56,7 +56,7 @@ CREATE SEQUENCE public.tests_id_seq
 
 CREATE TABLE public.tests (
 	id bigserial NOT NULL,
-	"name" text NOT NULL,
+	title text NOT NULL,
 	CONSTRAINT tests_pk PRIMARY KEY (id)
 );
 
@@ -69,7 +69,7 @@ CREATE TABLE public.tests (
 
 CREATE TABLE public.questions (
 	id bigserial NOT NULL,
-	question text NOT NULL,
+	title text NOT NULL,
 	test_id bigserial NOT NULL,
 	CONSTRAINT questions_pk PRIMARY KEY (id),
 	CONSTRAINT questions_fk FOREIGN KEY (test_id) REFERENCES public.tests(id)
@@ -84,7 +84,7 @@ CREATE TABLE public.questions (
 
 CREATE TABLE public.answers (
 	id bigserial NOT NULL,
-	answer text NOT NULL,
+	title text NOT NULL,
 	is_correct bool DEFAULT false NOT NULL,
 	question_id bigserial NOT NULL,
 	CONSTRAINT answers_pk PRIMARY KEY (id),
